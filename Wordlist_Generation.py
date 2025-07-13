@@ -8,7 +8,7 @@ import re # For WordWord capitalization (CamelCase-like)
 # ==============================================================================
 # ArbRock Passlist Generator - Custom Targeted Password Wordlist Generator
 # ==============================================================================
-# Author: Your Name/Handle (or leave as is)
+# Author: AAMBS & Balsinglawi
 # License: MIT License (A common open-source license. Consider adding a LICENSE file)
 #          (You can explicitly state this or add a separate LICENSE.md file)
 #
