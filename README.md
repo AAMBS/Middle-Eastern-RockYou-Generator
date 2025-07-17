@@ -146,6 +146,6 @@ Contributions are always welcome! If you have ideas for new password patterns, a
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.MD) file for details.
 
 ---
