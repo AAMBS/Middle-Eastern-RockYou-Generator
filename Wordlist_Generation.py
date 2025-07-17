@@ -130,7 +130,7 @@ letters = string.ascii_letters
 # --- Configuration ---
 # These parameters control the overall generation process.
 # ==============================================================================
-output_filename = "ArbRock_Random.txt" # The name of the output wordlist file.
+output_filename = "ArbRock.txt" # The name of the output wordlist file.
 target_password_count = 1500000 # The desired number of unique passwords to generate.
 
 # Relative weights for different password patterns.
