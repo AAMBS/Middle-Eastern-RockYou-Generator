@@ -4,7 +4,7 @@
 
 This project presents a **Middle-Eastern localized version of the RockYou wordlist**, a common tool in cybersecurity for password cracking. Developed with **educational intent**, this Python-based project generates a comprehensive dictionary of potential passwords relevant to the Middle East and UAE regions.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.MD) file for details.
 
 ---
 
