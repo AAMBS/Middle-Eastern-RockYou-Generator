@@ -4,7 +4,7 @@
 
 This project presents a **Middle-Eastern localized version of the RockYou wordlist**, a common tool in cybersecurity for password cracking. Developed with **educational intent**, this Python-based project generates a comprehensive dictionary of potential passwords relevant to the Middle East and UAE regions.
 
-This project is licensed under the MIT License - see the [LICENSE.MD](LICENSE.MD) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -18,100 +18,134 @@ This project is created solely for **educational purposes** to demonstrate the p
 
 The core of this project is a **Python script** that intelligently randomizes and combines a variety of elements specific to the Middle East and UAE. These elements include:
 
-* **Multiple languages:** Incorporating Arabic and potentially other regional languages.
-* **Common names:** Popular names from the Middle East.
-* **Significant places:** Cities, landmarks, and other geographical locations within the Middle East and UAE.
-* **Emojis and special characters:** To simulate common password patterns.
+* **Diverse Data Sources:** Incorporates extensive lists of personal names (Middle Eastern, South Asian, Western), family names, city names (UAE-specific, international), common words (including Arabic terms), sports teams, UAE-specific references, pet names, emotions, and more.
+* **Multiple Languages/Regional Data:** Leveraging popular names, common Arabic phrases, and significant places (cities, landmarks) from the Middle East and UAE.
+* **Common Names & Phrases:** Utilizing common words, pet names, love expressions, and common terms relevant to the region and globally.
+* **Years & Dates:** Incorporating common years (e.g., birth years, significant historical years) and specific recent years (e.g., `2023`, `2024`, `2025`), as well as month names and numerical date formats.
+* **Sports Teams & Cultural References:** Integrating popular sports teams and well-known UAE-specific landmarks and entities.
 
 To achieve a highly realistic and diverse wordlist, the generation process incorporates advanced techniques such as:
 
-* **Pattern Weights:** Assigning probabilities to different password structures (e.g., `word+year`, `name+special_char`).
-* **Common Affixes:** Including common prefixes and suffixes that users might append to words.
-* **Pet Names:** Integrating popular pet names.
-* **Special Characters:** A wide range of special characters are strategically included.
-* **Years & Special Years:** Incorporating common years (e.g., birth years, significant historical years) and specific years (e.g., `2023`, `2024`).
-* **Months:** Including full month names and their abbreviations.
-* **Love Expressions:** Common terms of endearment or love-related phrases.
-* **Case Variations:** Generating passwords with both lowercase and uppercase letters, and combinations thereof.
+* **Pattern Weights:** Assigning probabilities to different password structures (e.g., `word+year`, `name+special_char`) to mimic real-world password trends.
+* **Common Affixes:** Including common numeric, symbolic, and short word prefixes and suffixes that users might append.
+* **Case Variations:** Generating passwords with various casing styles (lowercase, uppercase, capitalized, CamelCase-like) to expand permutations.
 * **Leet Speak (Leetmaps):** Implementing `leet` variations (e.g., `a` becoming `4`, `e` becoming `3`) to ensure a wider range of permutations, mimicking common user habits.
 
 The script ensures:
 
 * **Randomization:** Utilizes Python's `random` module to create diverse and unpredictable password combinations.
 * **Uniqueness:** Guarantees that no duplicate entries are present in the generated wordlist.
-* **Scale:** The current iteration produces **10 million unique entries**, providing a substantial dictionary for educational demonstrations.
+* **Scale:** The current iteration produces up to **1.5 million unique entries**, providing a substantial dictionary for educational demonstrations.
 
 ---
 
 ## Demonstrative Use Case
 
-To illustrate the practical application (and the risks associated with weak passwords), a demonstration was conducted:
+To illustrate the practical application of such wordlists (and highlight the risks associated with weak passwords), a responsible demonstration was conducted:
 
-1.  A **dummy PDF file** (containing no sensitive information) was protected with a randomly generated password from the custom wordlist.
-2.  **John the Ripper**, a popular password cracking tool, was used to hash the PDF file.
-3.  The generated Middle-Eastern wordlist was then employed to **successfully crack the PDF's password** using John the Ripper.
+1.  A **dummy PDF file** (containing no sensitive information) was protected with a randomly generated password sourced directly from this custom wordlist.
+2.  **John the Ripper**, a popular password cracking tool, was used to extract the hash from the dummy PDF file.
+3.  The generated Middle-Eastern wordlist was then successfully employed with John the Ripper to **crack the PDF's password**.
+
+This demonstration serves to show how attackers might leverage common password patterns and regional specificity, underscoring the importance of strong, unique passwords for personal and organizational security.
 
 ---
 
-## Blue Team / Defensive Elements
+## Blue Team / Defensive Elements (Conceptual & Practical)
 
-Beyond demonstrating offensive capabilities, this project also incorporates crucial **Blue Team** (defensive) elements:
+Beyond demonstrating offensive capabilities, this project also emphasizes crucial **Blue Team** (defensive) principles and practices that should accompany any offensive security testing:
 
-* **Live Monitoring/Auditing:** Implementation of a system for continuous monitoring and auditing of file access, crucial for detecting unauthorized activities.
-* **AppArmor Scripting:** Strategic use of **AppArmor** to restrict John the Ripper's permissions, specifically ensuring it has **zero access** to the sensitive PDF file. This highlights the importance of principle of least privilege.
-* **File Permission Hardening:** Further implementation plans include tightening permissions on the PDF file itself, ensuring that **no unauthorized user** has access to modify or even touch the file.
+* **Live Monitoring/Auditing:** Highlighting the importance of implementing systems for continuous monitoring and auditing of file access and system activity, crucial for detecting and responding to unauthorized actions.
+* **AppArmor Scripting:** Demonstrating the strategic use of **AppArmor** to restrict a tool's permissions (e.g., ensuring John the Ripper has **zero access** to sensitive files during a test). This showcases the practical application of the principle of least privilege in securing systems.
+* **File Permission Hardening:** Emphasizing the critical step of tightening permissions on sensitive files themselves, ensuring that **no unauthorized user** can modify, access, or even view critical data.
+
+These defensive considerations are paramount in a comprehensive cybersecurity strategy, whether in a simulated environment or a real-world scenario.
 
 ---
 
 ## Getting Started
 
-How to Run Your Wordlist Generator
-Follow these steps to get your custom password wordlist generated on your system.
+Follow these steps to get your custom wordlist generated on your system.
 
-1. Prerequisites
-Before you start, ensure you have Python 3.x installed on your computer.
+### Prerequisites
 
-You can check your Python version by opening a terminal or command prompt and typing:
+* **Python 3.x** installed on your computer.
 
-``Bash
+    You can check your Python version by opening a terminal or command prompt and typing:
 
-python3 --version
-If Python 3 is not installed, please download it from python.org.
+    ```bash
+    python3 --version
+    ```
+    If Python 3 is not installed, please download it from [python.org](https://www.python.org/downloads/).
 
-2. Get the Code
-First, you need to download the project files to your local machine.
+### Installation & Execution
 
-Open your terminal or command prompt and use git clone to download the repository:
+1.  **Clone the Repository:**
+    Open your terminal or command prompt and clone this repository:
 
-``Bash
+    ```bash
+    git clone [https://github.com/your-username/middle-eastern-rockyou-generator.git](https://github.com/your-username/middle-eastern-rockyou-generator.git)
+    ```
+    *(**Important:** Remember to replace `your-username` with your actual GitHub username.)*
 
-git clone https://github.com/your-username/middle-eastern-rockyou-generator.git
-(Important: Remember to replace your-username with your actual GitHub username.)
+2.  **Navigate to the Project Directory:**
+    Change your current directory to the cloned repository folder:
 
-3. Navigate to the Project Directory
-Once the repository is cloned, change your current directory to the project folder:
+    ```bash
+    cd middle-eastern-rockyou-generator
+    ```
 
-``Bash
+3.  **Run the Wordlist Generator Script:**
+    Execute the Python script to start the password generation process. It will display progress updates in your terminal.
 
-cd middle-eastern-rockyou-generator
-4. Run the Wordlist Generator Script
-Now, you can execute the Python script. This will start the password generation process.
+    ```bash
+    python3 your_script_name.py
+    ```
+    *(**Note:** Replace `your_script_name.py` with the actual filename of your Python script, for example, `ArbRock_Random.py` if that is its name.)*
 
-Bash
+4.  **Locate Your Wordlist:**
+    Once the script completes, the generated wordlist will be saved as a text file in the same directory. By default, this file is named:
+    * **`ArbRock_Random.txt`**
 
-python3 your_script_name.py
-(If you have named your Python script something different, replace your_script_name.py with its actual filename, e.g., python3 generate_wordlist.py or python3 ArbRock_Random.py if that's what you decided.)
+### Using the Generated Wordlist
 
-The script will display progress updates in your terminal as it generates passwords.
+* **Local Use:** If you run the generator on your Kali Linux machine (or another Linux distribution used for security testing), the `ArbRock_Random.txt` file will be directly available in the directory where you ran the script.
+* **Transfer to Kali (if generated elsewhere):** If you generated the wordlist on a different operating system (e.g., Windows, macOS), you can easily transfer the `ArbRock_Random.txt` file to your Kali Linux VM using:
+    * **Shared Folders:** Configure a shared folder between your host OS and your Kali VM in your virtualization software (VirtualBox, VMware).
+    * **SCP (Secure Copy Protocol):** If SSH is set up on Kali, you can use `scp` from your host machine.
+    * **USB Drive / Cloud Storage:** Copy the file via external media or cloud services.
 
-5. Find the Generated Wordlist
-After the script finishes (it will print a "Generation complete" message), your custom wordlist will be saved as a text file in the same directory where you ran the script.
+Once transferred, you can then integrate `ArbRock_Random.txt` into password cracking tools like John the Ripper (e.g., `john --wordlist=ArbRock_Random.txt --format=raw-md5 hash.txt`) or Hashcat, just as you would with any other wordlist (like `rockyou.txt`).
 
-By default, the output file is named:
+---
 
-ArbRock_Random.txt
+## Configuration & Customization
 
-6. Customization (Optional)
-If you wish to change the number of passwords generated, the output filename, or adjust the generation patterns, you can do so by editing the Python script directly.
+You can easily adjust the generation parameters directly within the Python script (`your_script_name.py`) to suit your specific needs.
 
-Open the your_script_name.py file in any text editor and look for the --- Configuration --- section at the top to modify these parameters.
+Open the script in any text editor and look for the `--- Configuration ---` section. Here you can modify:
+
+* **`output_filename`**: Change this string to specify a different name for your generated wordlist file.
+* **`target_password_count`**: Modify this integer to set the desired number of unique passwords you want to generate.
+* **`pattern_weights`**: This dictionary allows you to fine-tune the prevalence of each password pattern. Increase a pattern's weight to make it appear more frequently, or decrease it for less frequent inclusion.
+* **Base Data Lists:** Feel free to expand, adjust, or remove entries from the `family_names`, `personal_names`, `city_names`, `common_passwords`, `common_words`, `sports_teams`, `uae_references`, etc. Adding more relevant local data (e.g., specific to a certain country or region you are targeting) will significantly improve the effectiveness of the wordlist for your specific use case.
+
+---
+
+## Contributing
+
+Contributions are always welcome! If you have ideas for new password patterns, additional data to include in the lists (especially for underrepresented regions or specific cultural references), or improvements to the code, feel free to:
+
+1.  Fork this repository.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
