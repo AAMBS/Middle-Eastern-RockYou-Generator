@@ -65,11 +65,53 @@ Beyond demonstrating offensive capabilities, this project also incorporates cruc
 
 ## Getting Started
 
-*(Instructions on how to set up and run the Python script, prerequisites, etc., will go here. You'll need to fill this section in once your code is ready.)*
+How to Run Your Wordlist Generator
+Follow these steps to get your custom password wordlist generated on your system.
 
-```bash
-# Example (you'll replace this with actual instructions)
-git clone [https://github.com/your-username/middle-eastern-rockyou.git](https://github.com/your-username/middle-eastern-rockyou.git)
-cd middle-eastern-rockyou
-pip install -r requirements.txt
-python generate_wordlist.py
+1. Prerequisites
+Before you start, ensure you have Python 3.x installed on your computer.
+
+You can check your Python version by opening a terminal or command prompt and typing:
+
+``Bash
+
+python3 --version
+If Python 3 is not installed, please download it from python.org.
+
+2. Get the Code
+First, you need to download the project files to your local machine.
+
+Open your terminal or command prompt and use git clone to download the repository:
+
+``Bash
+
+git clone https://github.com/your-username/middle-eastern-rockyou-generator.git
+(Important: Remember to replace your-username with your actual GitHub username.)
+
+3. Navigate to the Project Directory
+Once the repository is cloned, change your current directory to the project folder:
+
+``Bash
+
+cd middle-eastern-rockyou-generator
+4. Run the Wordlist Generator Script
+Now, you can execute the Python script. This will start the password generation process.
+
+Bash
+
+python3 your_script_name.py
+(If you have named your Python script something different, replace your_script_name.py with its actual filename, e.g., python3 generate_wordlist.py or python3 ArbRock_Random.py if that's what you decided.)
+
+The script will display progress updates in your terminal as it generates passwords.
+
+5. Find the Generated Wordlist
+After the script finishes (it will print a "Generation complete" message), your custom wordlist will be saved as a text file in the same directory where you ran the script.
+
+By default, the output file is named:
+
+ArbRock_Random.txt
+
+6. Customization (Optional)
+If you wish to change the number of passwords generated, the output filename, or adjust the generation patterns, you can do so by editing the Python script directly.
+
+Open the your_script_name.py file in any text editor and look for the --- Configuration --- section at the top to modify these parameters.
