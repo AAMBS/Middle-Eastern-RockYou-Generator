@@ -46,9 +46,9 @@ import re # For WordWord capitalization (CamelCase-like)
 # ==============================================================================
 family_names = [
     "AlAbdullah", "AlMansoori", "AlMarri", "AlMazrouei", "AlNuaimi", "AlFalasi",
-    "AlQasimi", "AlQubaisi", "AlKusaibi", "AlRomaithi", "AlAli", "AlGhfuli",
+    "AlQubaisi", "AlKusaibi", "AlRomaithi", "AlAli", "AlGhfuli",
     "AlMussabi", "AlShehhi", "AlBalooshi", "AlMuhairi", "AlOwais", "AlDhaheri",
-    "AlSuwaidi", "AlJunaibi", "AlKaabi", "AlShamsi", "AlMaktoum", "AlNahyan", # UAE/GCC specific
+    "AlSuwaidi", "AlJunaibi", "AlKaabi", "AlShamsi", # UAE/GCC specific
     "Khan", "Singh", "Sharma", "Patel", "Kumar", "Ali", "Shah", "Ahmed", "Rizvi",
     "Chowdhury", "Bhatia", "Siddiqui", "Malik", "Rahman", "Hussain", "Qureshi",
     "Desai", "Joshi", "Chatterjee", "Gupta", "Mehta", "Saxena", "Ismail", "Shaikh", # Indian/Pakistani/South Asian
